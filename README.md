@@ -43,23 +43,21 @@ It handles full SPI communication, monochrome buffer rotation, LVGL framebuffer 
 ---
 
 ## 🧱 Directory Structure
-
-EInkLVGL-ESP32/
+```
+root/
+│
 ├── main/
-│ ├── main.c # Core application and LVGL flush callback
-│ ├── ssd1680_regs.h # Register map for SSD1680 controller
-│ ├── fonts/
-│ │ ├── ink_free_12.c # LVGL font converted from Ink Free TTF
-│ │ └── ink_free_12.h
-│ └── CMakeLists.txt # Component registration
+│   ├── main.c                # App, LVGL flush, SPI + SSD1680 sequence
+│   ├── ssd1680_regs.h        # SSD1680 register definitions
+│   ├── fonts/
+│   │   ├── ink_free_12.c     # LVGL font (generated)
+│   │   └── ink_free_12.h
+│   └── CMakeLists.txt        # Component registration (LVGL, drivers)
+│
 └── README.md
+```
 
-
----
-
-
-
-⚙️ Build Instructions
+## ⚙️ Build Instructions
 
 ### 1. Prerequisites
 - ESP-IDF v5.2 or newer  
@@ -68,21 +66,24 @@ EInkLVGL-ESP32/
 - ESP32-S3 DevKitC-1 board
 
 ### 2. Clone & Configure
+```
 bash
-git clone https://github.com/<yourusername>/EInkLVGL-ESP32.git
+git clone https://github.com/suleymangunel/ESP32S3-ePaper-WaveShare213v4.git
 cd EInkLVGL-ESP32
 idf.py set-target esp32s3
 idf.py menuconfig
+```
 
-Enable or verify:
+*** Enable or verify:
+```
 LVGL and esp_lvgl_port
 SPI peripheral support
-
+```
 ### 3. Build & Flash
-
+```
 idf.py build
 idf.py -p /dev/ttyUSB0 flash monitor
-
+```
 
 
 ## 🧠 Technical Notes
@@ -99,16 +100,19 @@ lv_font_conv --font Inkfree.ttf --size 20 --bpp 4 --format lvgl --no-compress \
 
 
 ## 📄 License
+```
 This project is licensed under the MIT License.
 See the LICENSE file for details.
-
+```
 ## 📚 References
+```
 LVGL Documentation
 Waveshare 2.13" V4 E-Paper Datasheet (SSD1680)
 Espressif ESP-IDF
-
+```
 
 ## ✨ Author
+```
 Süleyman Günel
-
 Embedded AI & IoT Systems Developer
+```

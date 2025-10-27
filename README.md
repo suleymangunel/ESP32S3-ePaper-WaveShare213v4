@@ -81,6 +81,8 @@ SPI peripheral support
 idf.py build
 idf.py -p /dev/ttyUSB0 flash monitor
 
+
+
 🧠 Technical Notes
 The rgb565_to_mono() function performs on-the-fly rotation (90° clockwise) and X-mirroring during LVGL buffer conversion.
 All pixel data is sent as 1-bit per pixel (monochrome) using MSB-first alignment.
@@ -103,6 +105,8 @@ LVGL Documentation
 Waveshare 2.13" V4 E-Paper Datasheet (SSD1680)
 Espressif ESP-IDF
 
+
 ✨ Author
 Süleyman Günel
+
 Embedded AI & IoT Systems Developer

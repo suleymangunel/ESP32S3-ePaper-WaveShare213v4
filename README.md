@@ -44,4 +44,40 @@ It handles full SPI communication, monochrome buffer rotation, LVGL framebuffer 
 
 ## 🧱 Directory Structure
 
+EInkLVGL-ESP32/
+├── main/
+│ ├── main.c # Core application and LVGL flush callback
+│ ├── ssd1680_regs.h # Register map for SSD1680 controller
+│ ├── fonts/
+│ │ ├── ink_free_12.c # LVGL font converted from Ink Free TTF
+│ │ └── ink_free_12.h
+│ └── CMakeLists.txt # Component registration
+└── README.md
+
+
+---
+
+## ⚙️ Build Instructions
+
+### 1. Prerequisites
+- ESP-IDF v5.2 or newer  
+- LVGL v9.x (via ESP-IDF component manager)  
+- Python 3.8+  
+- ESP32-S3 DevKitC-1 board
+
+### 2. Clone & Configure
+bash
+git clone https://github.com/<yourusername>/EInkLVGL-ESP32.git
+cd EInkLVGL-ESP32
+idf.py set-target esp32s3
+idf.py menuconfig
+
+Enable or verify:
+LVGL and esp_lvgl_port
+SPI peripheral support
+
+3. Build & Flash
+
+idf.py build
+idf.py -p /dev/ttyUSB0 flash monitor
 

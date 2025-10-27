@@ -59,7 +59,7 @@ EInkLVGL-ESP32/
 
 
 
-## ⚙️ Build Instructions
+⚙️ Build Instructions
 
 ### 1. Prerequisites
 - ESP-IDF v5.2 or newer  

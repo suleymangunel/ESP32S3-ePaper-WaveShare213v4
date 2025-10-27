@@ -99,8 +99,8 @@ lv_font_conv --font Inkfree.ttf --size 20 --bpp 4 --format lvgl --no-compress \
 📄 License
 This project is licensed under the MIT License.
 See the LICENSE file for details.
-📚 References
 
+📚 References
 LVGL Documentation
 Waveshare 2.13" V4 E-Paper Datasheet (SSD1680)
 Espressif ESP-IDF

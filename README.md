@@ -44,17 +44,17 @@ It handles full SPI communication, monochrome buffer rotation, LVGL framebuffer 
 
 ## 🧱 Directory Structure
 ```
-root/
+📁 root/
 │
-├── main/
-│   ├── main.c                # App, LVGL flush, SPI + SSD1680 sequence
-│   ├── ssd1680_regs.h        # SSD1680 register definitions
-│   ├── fonts/
-│   │   ├── ink_free_12.c     # LVGL font (generated)
-│   │   └── ink_free_12.h
-│   └── CMakeLists.txt        # Component registration (LVGL, drivers)
+├── 📁 main/
+│   ├── 📄 main.c                # App, LVGL flush, SPI + SSD1680 sequence
+│   ├── 📄 ssd1680_regs.h        # SSD1680 register definitions
+│   ├── 📁 fonts/
+│   │   ├── 📄 ink_free_12.c     # LVGL font (generated)
+│   │   └── 📄 ink_free_12.h
+│   └── 📄 CMakeLists.txt        # Component registration (LVGL, drivers)
 │
-└── README.md
+└── 📄 README.md
 ```
 
 ## ⚙️ Build Instructions
@@ -112,7 +112,6 @@ Espressif ESP-IDF
 ```
 
 ## ✨ Author
-```
-Süleyman Günel
-Embedded AI & IoT Systems Developer
-```
+    Süleyman Günel
+    Embedded AI & IoT Systems Developer
+

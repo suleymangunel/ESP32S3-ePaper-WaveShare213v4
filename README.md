@@ -76,8 +76,33 @@ Enable or verify:
 LVGL and esp_lvgl_port
 SPI peripheral support
 
-3. Build & Flash
+### 3. Build & Flash
 
 idf.py build
 idf.py -p /dev/ttyUSB0 flash monitor
 
+🧠 Technical Notes
+The rgb565_to_mono() function performs on-the-fly rotation (90° clockwise) and X-mirroring during LVGL buffer conversion.
+All pixel data is sent as 1-bit per pixel (monochrome) using MSB-first alignment.
+Display update sequence (epd_display_frame()) triggers a full hardware refresh and waits for the busy signal.
+
+🖋️ Font Conversion Command
+You can regenerate the included font using:
+
+lv_font_conv --font Inkfree.ttf --size 20 --bpp 4 --format lvgl --no-compress \
+  --range 0x20-0x7F,0xC7,0xE7,0x286,0x287,0x304,0x305,0x214,0x246,0x350,0x351,0x220,0x252 \
+  -o ink_free_12.c
+
+
+📄 License
+This project is licensed under the MIT License.
+See the LICENSE file for details.
+📚 References
+
+LVGL Documentation
+Waveshare 2.13" V4 E-Paper Datasheet (SSD1680)
+Espressif ESP-IDF
+
+✨ Author
+Süleyman Günel
+Embedded AI & IoT Systems Developer

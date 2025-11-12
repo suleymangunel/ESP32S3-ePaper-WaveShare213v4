@@ -1,3 +1,12 @@
+<div class="sag">
+    <th><img alt="GitHub License" src="https://img.shields.io/github/license/suleymangunel/ePaper-WS213v4?label=License&style=plastic"></th>
+    <th><img alt="Static Badge" src="https://img.shields.io/badge/Type-Firmware-gold?style=plastic"></th>
+    <th><img alt="Static Badge" src="https://img.shields.io/badge/Language-C-red?style=plastic"></th>
+    <th><img alt="Static Badge" src="https://img.shields.io/badge/Platform-ESP32%2FS3-blue?style=plastic"></th>
+    <th><img alt="Static Badge" src="https://img.shields.io/badge/Framework-ESP%E2%94%80IDF-white?style=plastic"></th>
+    <th><img alt="Static Badge" src="https://img.shields.io/badge/OS-FreeRTOS-black?style=plastic"></th>
+</div>
+
 # ESP32S3-ePaper-WaveShare213v4
 
 > Minimal ESP-IDF + LVGL driver demo for Waveshare 2.13" V4 E-Paper (SSD1680) display.
